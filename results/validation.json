@@ -1,0 +1,105 @@
+{
+  "checked_at": "2026-09-26 17:00:27",
+  "timezone": "Asia/Shanghai",
+  "platform": "Windows",
+  "tests": 5,
+  "checks": [
+    {
+      "preset": "full",
+      "cycles": 128304013,
+      "ms": 427.68004333333334,
+      "operators": 2277,
+      "effective_mac": 52673989632,
+      "critical_categories_match": true,
+      "wall_seconds": 172.062,
+      "flags": {
+        "DMA_DEDICATED": "1",
+        "FP16DOMAIN": "1",
+        "MERGE_W": "96",
+        "RAW_BANKS": "0",
+        "READ_PORTS": "4",
+        "READ_WIDTH": "64",
+        "SNAPSHOT": "1",
+        "W4A8_CONFIG": "A"
+      }
+    },
+    {
+      "preset": "h1",
+      "cycles": 135663376,
+      "ms": 452.21125333333333,
+      "operators": 2277,
+      "effective_mac": 52673989632,
+      "critical_categories_match": true,
+      "wall_seconds": 180.25,
+      "flags": {
+        "DMA_DEDICATED": "1",
+        "FP16DOMAIN": "1",
+        "MERGE_W": "24",
+        "RAW_BANKS": "0",
+        "READ_PORTS": "4",
+        "READ_WIDTH": "64",
+        "SNAPSHOT": "0",
+        "W4A8_CONFIG": "A"
+      }
+    },
+    {
+      "preset": "h2",
+      "cycles": 167795501,
+      "ms": 559.3183366666667,
+      "operators": 2277,
+      "effective_mac": 52673989632,
+      "critical_categories_match": true,
+      "wall_seconds": 203.141,
+      "flags": {
+        "DMA_DEDICATED": "1",
+        "FP16DOMAIN": "1",
+        "MERGE_W": "96",
+        "PACK1": "1",
+        "RAW_BANKS": "0",
+        "READ_PORTS": "4",
+        "READ_WIDTH": "64",
+        "SNAPSHOT": "1",
+        "W4A8_CONFIG": "A"
+      }
+    },
+    {
+      "preset": "h3",
+      "cycles": 163204617,
+      "ms": 544.01539,
+      "operators": 2277,
+      "effective_mac": 52673989632,
+      "critical_categories_match": true,
+      "wall_seconds": 248.032,
+      "flags": {
+        "DEDICATED_SFU": "1",
+        "DMA_DEDICATED": "1",
+        "FP16DOMAIN": "1",
+        "MERGE_W": "96",
+        "RAW_BANKS": "0",
+        "READ_PORTS": "4",
+        "READ_WIDTH": "64",
+        "SNAPSHOT": "1",
+        "W4A8_CONFIG": "A"
+      }
+    },
+    {
+      "preset": "fp16",
+      "cycles": 176801157,
+      "ms": 589.33719,
+      "operators": 2277,
+      "effective_mac": 52673989632,
+      "critical_categories_match": true,
+      "wall_seconds": 157.875,
+      "flags": {
+        "DMA_DEDICATED": "1",
+        "FP16_DIRECT": "1",
+        "MERGE_W": "24",
+        "RAW_BANKS": "0",
+        "READ_PORTS": "4",
+        "READ_WIDTH": "64",
+        "W4A8_CONFIG": "A"
+      }
+    }
+  ],
+  "python": "3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]"
+}

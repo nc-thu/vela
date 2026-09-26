@@ -1,8 +1,7 @@
-"""Complete captured-call event model; architecture prediction, NOT RTL execution.
+"""Shared configuration, causal event scheduling, and operator categories.
 
-Every event is an integer-duration reservation with causal predecessors. Main
-schedule completes each ATen operation before the next, while overlapping tile
-prefetch, GEMM, merge and encoding. No unknown-op zero-cost fallback.
+An event reserves its resources for an integer number of cycles. The engines
+extend these rules with bank hazards, finite storage, and operator scheduling.
 """
 import json, math, csv, argparse, collections
 from pathlib import Path

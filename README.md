@@ -6,6 +6,9 @@ Vela combines group-wise INT8 quantization, two-product DSP packing, and a heter
 
 [Paper](paper/main.pdf) · [Architecture](docs/architecture.md) · [Reproduction guide](docs/reproduction.md)
 
+The five full-workload configurations have been replayed against the archived
+results. See [release verification](docs/verification.md).
+
 ## Getting started
 
 Requires Python 3.10 or newer and NumPy. No GPU, Vivado installation, model checkpoint, or LIBERO installation is needed to replay the supplied operator trace.
