@@ -1,0 +1,40 @@
+{
+  "clock_mhz": 300,
+  "operators": 2277,
+  "effective_mac": 52673989632,
+  "presets": {
+    "full": {
+      "SNAPSHOT": "1",
+      "FP16DOMAIN": "1",
+      "MERGE_W": "96"
+    },
+    "h1": {
+      "SNAPSHOT": "0",
+      "FP16DOMAIN": "1",
+      "MERGE_W": "24"
+    },
+    "h2": {
+      "SNAPSHOT": "1",
+      "FP16DOMAIN": "1",
+      "MERGE_W": "96",
+      "PACK1": "1"
+    },
+    "h3": {
+      "SNAPSHOT": "1",
+      "FP16DOMAIN": "1",
+      "MERGE_W": "96",
+      "DEDICATED_SFU": "1"
+    },
+    "fp16": {
+      "FP16_DIRECT": "1",
+      "MERGE_W": "24"
+    }
+  },
+  "common": {
+    "W4A8_CONFIG": "A",
+    "RAW_BANKS": "0",
+    "READ_WIDTH": "64",
+    "DMA_DEDICATED": "1",
+    "READ_PORTS": "4"
+  }
+}

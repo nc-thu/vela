@@ -1,0 +1,72 @@
+{
+ "generated": "2026-09-25 23:33:32",
+ "caliber": "cycle-level event model, W8A8 G64, 300MHz, same trace/memory/numerics",
+ "h1_framing": "H1按完整回退口径：组间停机+合并24通道（快照机制的时延+面积两维同时回退），降低比例按(T_h1−T_full)/T_h1",
+ "rows": [
+  {
+   "label": "FP16 baseline",
+   "ms": 589.34,
+   "reduction_pct": 27.4,
+   "mechanism": "同资源FP16阵列（1乘积/DSP）",
+   "merge_dsp": 96,
+   "total_dsp": 977,
+   "gemm_wait_ms": 0.0,
+   "note": "量化框架整体收益：FP16全直算无量化开销"
+  },
+  {
+   "label": "H1: group-boundary stall + merge24",
+   "ms": 452.21,
+   "reduction_pct": 5.4,
+   "mechanism": "组间停机（无双缓冲快照）+ 合并回到24通道",
+   "merge_dsp": 24,
+   "total_dsp": 905,
+   "gemm_wait_ms": 29.9,
+   "note": "快照机制完整回退：阵列在每组边界停机等合并+合并单元回到24通道"
+  },
+  {
+   "label": "H2: one product per DSP",
+   "ms": 559.32,
+   "reduction_pct": 23.5,
+   "mechanism": "每DSP每拍1个INT8乘积",
+   "merge_dsp": 96,
+   "total_dsp": 977,
+   "gemm_wait_ms": 136.7,
+   "note": "Pack2双乘积密度的系统收益"
+  },
+  {
+   "label": "H3: dedicated per-function units",
+   "ms": 544.02,
+   "reduction_pct": 21.4,
+   "mechanism": "GELU/tanh/softmax/LN/sincos分立实现（同总资源32通道）",
+   "merge_dsp": 96,
+   "total_dsp": 977,
+   "gemm_wait_ms": 10.5,
+   "note": "HNU共享数据通路的收益"
+  },
+  {
+   "label": "Full design (W8A8 G64)",
+   "ms": 427.68,
+   "reduction_pct": 0.0,
+   "mechanism": "完整设计",
+   "merge_dsp": 96,
+   "total_dsp": 977,
+   "gemm_wait_ms": 10.1,
+   "note": ""
+  }
+ ],
+ "h1_decomposition": {
+  "h1_overlap_only": {
+   "ms": 450.74,
+   "note": "只关重叠（SNAP=0,merge96不变）"
+  },
+  "h1_full": {
+   "ms": 452.21125333333333,
+   "note": "关重叠+回merge24（完整回退到快照机制引入前）"
+  },
+  "merge24_alone": {
+   "ms": 429.15,
+   "note": "只回merge24（SNAP=1不变），G64下合并24已藏得住，仅0.3%"
+  },
+  "insight": "G64下合并墙本来就不高（0.3%），H1的5.1%~5.4%几乎全部来自组间停机的时延收益，不是面积收益"
+ }
+}

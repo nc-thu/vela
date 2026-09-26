@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vela-sim"
+version = "1.0.0"
+description = "Cycle-level architecture simulator for the Vela W8A8 FPGA accelerator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Cheng Nian"}, {name = "Jiaqi Zhang"}, {name = "Fasih Ud Din Farrukh"}, {name = "Jiaying Peng"}, {name = "Xiaorui Mo"}, {name = "Fei Chen"}, {name = "Chun Zhang"}]
+dependencies = ["numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.7,<4", "pymupdf>=1.23"]
+
+[project.scripts]
+vela = "vela.cli:main"
+
+[project.urls]
+Repository = "https://github.com/nc-thu/vela"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+vela = ["data/*.json"]

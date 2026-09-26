@@ -1,0 +1,33 @@
+{
+  "cycles": 176801157,
+  "ms": 589.33719,
+  "operator_count": 2277,
+  "effective_mac": 52673989632,
+  "wire_bytes": 2739509056,
+  "event_count": 6937448,
+  "critical_cycles": {
+    "ddr_write": 7483996,
+    "local_move": 22605130,
+    "reduce": 1066894,
+    "control": 1824,
+    "elementwise": 11763544,
+    "nonlinear": 27655154,
+    "ddr_read": 17479104,
+    "gemm": 82322088,
+    "weight_read": 5774923,
+    "layout": 648500
+  },
+  "busy_cycles": {
+    "control": 2594,
+    "layout": 1211518,
+    "local_move": 73718134,
+    "ddr_read": 33185486,
+    "elementwise": 16322696,
+    "reduce": 1066894,
+    "nonlinear": 28791403,
+    "weight_read": 74861151,
+    "gemm": 82631032,
+    "ddr_write": 9619343
+  },
+  "source": "v17_fp16_direct/fp16_A_ports"
+}

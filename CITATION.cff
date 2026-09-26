@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this simulator, please cite Vela."
+type: software
+title: "Vela: An Efficient Open-Source FPGA Hardware Accelerator for End to End Vision-Language-Action Inference"
+version: 1.0.0
+date-released: 2026-09-26
+license: MIT
+repository-code: "https://github.com/nc-thu/vela"
+authors:
+  - family-names: Nian
+    given-names: Cheng
+  - family-names: Zhang
+    given-names: Jiaqi
+  - family-names: Farrukh
+    given-names: Fasih Ud Din
+  - family-names: Peng
+    given-names: Jiaying
+  - family-names: Mo
+    given-names: Xiaorui
+  - family-names: Chen
+    given-names: Fei
+  - family-names: Zhang
+    given-names: Chun

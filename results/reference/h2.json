@@ -1,0 +1,43 @@
+{
+  "cycles": 167795501,
+  "ms": 559.3183366666667,
+  "operator_count": 2277,
+  "effective_mac": 52673989632,
+  "wire_bytes": 1425469184,
+  "event_count": 9499717,
+  "critical_cycles": {
+    "ddr_write": 4730269,
+    "local_move": 18954187,
+    "reduce": 441214,
+    "control": 1824,
+    "elementwise": 9919126,
+    "nonlinear": 25833842,
+    "ddr_read": 11475483,
+    "restore": 483229,
+    "merge": 190009,
+    "gemm": 83796480,
+    "scale": 27951,
+    "quantize": 4909487,
+    "weight_read": 941416,
+    "layout": 3093480,
+    "encode": 2997504
+  },
+  "busy_cycles": {
+    "control": 2594,
+    "layout": 3616894,
+    "local_move": 61815299,
+    "ddr_read": 15228585,
+    "elementwise": 14478488,
+    "reduce": 441214,
+    "nonlinear": 26809099,
+    "quantize": 8339503,
+    "scale": 9972983,
+    "weight_read": 37437304,
+    "gemm": 84098640,
+    "merge": 9944960,
+    "restore": 2782419,
+    "encode": 5823360,
+    "ddr_write": 7044371
+  },
+  "source": "v21_ablation/h2"
+}

@@ -1,0 +1,43 @@
+{
+  "cycles": 163204617,
+  "ms": 544.01539,
+  "operator_count": 2277,
+  "effective_mac": 52673989632,
+  "wire_bytes": 1425469184,
+  "event_count": 9499717,
+  "critical_cycles": {
+    "ddr_write": 4730269,
+    "local_move": 22476267,
+    "reduce": 441214,
+    "control": 1824,
+    "elementwise": 10091158,
+    "nonlinear": 61568062,
+    "ddr_read": 11459131,
+    "restore": 642973,
+    "merge": 296377,
+    "gemm": 37905488,
+    "scale": 27951,
+    "quantize": 5161391,
+    "weight_read": 941416,
+    "layout": 3093480,
+    "encode": 4367616
+  },
+  "busy_cycles": {
+    "control": 2594,
+    "layout": 3616894,
+    "local_move": 61815299,
+    "ddr_read": 15228585,
+    "elementwise": 14478488,
+    "reduce": 441214,
+    "nonlinear": 62910525,
+    "quantize": 8339503,
+    "scale": 9972983,
+    "weight_read": 37437304,
+    "gemm": 43600568,
+    "merge": 9944960,
+    "restore": 2782419,
+    "encode": 5823360,
+    "ddr_write": 7044371
+  },
+  "source": "v21_ablation/h3ded"
+}

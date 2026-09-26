@@ -1,0 +1,1 @@
+"""Vela architecture simulation artifact."""

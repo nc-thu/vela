@@ -1,0 +1,62 @@
+{
+  "generated_at": "2026-09-25 00:06:36",
+  "clock_mhz": 300.0,
+  "module_rows": [
+    {"module": "W8 array ×768", "lut": 384, "ff": 38784, "dsp": 768, "bram36": 0, "power_w": 1.926, "wns_ns": 0.548, "family": "w8"},
+    {"module": "W4 PE array ×384", "lut": 61161, "ff": 90849, "dsp": 384, "bram36": 0, "power_w": 5.184, "wns_ns": 0.012, "family": "w4"},
+    {"module": "Quantizer G32", "lut": 11448, "ff": 6817, "dsp": 97, "bram36": 0.5, "power_w": 1.029, "wns_ns": 0.411, "family": "group"},
+    {"module": "Quantizer G64", "lut": 11552, "ff": 7358, "dsp": 97, "bram36": 0.5, "power_w": 1.005, "wns_ns": 0.154, "family": "group"},
+    {"module": "Encoder G32", "lut": 4216, "ff": 3807, "dsp": 1, "bram36": 0, "power_w": 0.247, "wns_ns": 0.708, "family": "group"},
+    {"module": "FP16 restore", "lut": 15446, "ff": 7013, "dsp": 0, "bram36": 0, "power_w": 0.614, "wns_ns": 0.859, "family": "group"},
+    {"module": "Merge96", "lut": 0, "ff": 2, "dsp": 96, "bram36": 0, "power_w": 0.091, "wns_ns": 1.459, "family": "group"},
+    {"module": "HNU", "lut": 16027, "ff": 20448, "dsp": 112, "bram36": 8, "power_w": 0.491, "wns_ns": 0.537, "family": "hnu"},
+    {"module": "Four-port read arbiter", "lut": 17585, "ff": 148, "dsp": 0, "bram36": 232, "power_w": 0.634, "wns_ns": 0.010, "family": "move"},
+    {"module": "Snapshot buffer", "lut": 19, "ff": 6, "dsp": 0, "bram36": 2, "power_w": 0.009, "wns_ns": 1.998, "family": "group"},
+    {"module": "Memory subsystem + DMA", "lut": 12591, "ff": 4479, "dsp": 0, "bram36": 25.5, "power_w": 0.397, "wns_ns": 0.536, "family": "move"},
+    {"module": "Controller", "lut": 327, "ff": 18, "dsp": 1, "bram36": 0, "power_w": 0.014, "wns_ns": 1.465, "family": "control"}
+  ],
+  "critical_cycles": {
+    "W8A8 G64": {
+      "total": 128304013,
+      "ddr_write": 4730269,
+      "local_move": 22386139,
+      "reduce": 441214,
+      "control": 1824,
+      "elementwise": 9919126,
+      "nonlinear": 25833842,
+      "ddr_read": 11475483,
+      "restore": 483229,
+      "merge": 190009,
+      "gemm": 40873040,
+      "scale": 27951,
+      "quantize": 4909487,
+      "weight_read": 941416,
+      "layout": 3093480,
+      "encode": 2997504
+    },
+    "W4A8 G32": {
+      "total": 117225723,
+      "ddr_write": 4729901,
+      "local_move": 22416199,
+      "reduce": 441214,
+      "control": 1824,
+      "elementwise": 10066726,
+      "nonlinear": 26123330,
+      "ddr_read": 9642134,
+      "restore": 630843,
+      "merge": 285196,
+      "gemm": 28392170,
+      "scale": 53963,
+      "quantize": 6723655,
+      "weight_read": 234412,
+      "layout": 3093548,
+      "encode": 4390608
+    }
+  },
+  "sources": {
+    "updated_rows": "hw/v33_2026-09-24_144706_timing_real/timing_real_results.json",
+    "w8_cycles": "arch/v18_2026-09-21_180229_snapshot_fp16domain/results/sfp4m96/summary.json",
+    "w4_cycles": "arch/v18_2026-09-21_180229_snapshot_fp16domain/results/E_all96/summary.json",
+    "unchanged_rows": "paper/2026-09-24_132421_ieeetran_revision/main.tex (v30/v31 post-route rows)"
+  }
+}
